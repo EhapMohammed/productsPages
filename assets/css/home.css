@@ -1,0 +1,130 @@
+p
+{
+  margin: 0;
+}
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.image-container .centered-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  width: 100%;
+}
+
+
+
+
+/* Custom CSS */
+.product-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.product-list li {
+  padding: 20px 0px;
+  margin: 0 10px;
+  border-bottom: 1px solid #a8a8a84d;
+}
+.product-list li a
+{
+  display: flex;
+  align-items: center;
+  color: unset;
+  text-decoration: none;
+}
+.product-list img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+.product-list .product-info {
+  flex: 1;
+  margin-left: 15px;
+}
+
+.product-list .product-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.product-list .product-price {
+  /* color: #888; */
+  font-weight: 500;
+  margin: 0;
+}
+@media (max-width:768px) {
+  .product-list img
+  {
+    width: 75px;
+    margin-right: 5px;
+    height: 75px;
+  }
+  .product-list .product-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  .product-list .product-info
+  {
+    margin-left: 5px;
+  }
+}
+
+/* second page */
+.head-container
+{
+  display: flex;
+  justify-content: center;
+  background-color: #88888840;
+  padding: 10px;
+}
+.product-card
+{
+  padding: 10px;
+}
+.product-card .product-card-header
+{
+  /* display: flex; */
+  /* justify-content: center; */
+}
+.product-card .product-card-header img
+{
+  width: 400px;
+  height: 400px;
+  border-radius: 8px;
+}
+.product-card .product-card-body p ,
+.product-card .product-card-description h5
+{
+  color:#888;
+  margin: .5rem 0;
+}
+.product-card .product-card-description h5
+{
+  font-weight: 300;
+}
+@media (max-width:768px) {
+  .product-card .product-card-header img
+  {
+    width: 100%;
+    height: 100%;
+  }
+}
