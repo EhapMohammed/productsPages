@@ -1,19 +1,24 @@
+:root
+{
+  --imgBig-- : 150px;
+  --imgSmall-- : 75px;
+  --homeImg-- : 400px;
+}
 p
 {
   margin: 0;
 }
-.image-container {
-  position: relative;
-  display: inline-block;
-}
 
-.image-container img {
+.carousel-item img {
+  width: 100vw;
   max-width: 100%;
-  height: auto;
-  display: block;
+  min-width: 100%;
+  height: 250px;
+  /* margin: 0; */
+  /* display: block; */
 }
 
-.image-container .centered-text {
+.carousel-item .centered-text {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -49,8 +54,12 @@ p
   text-decoration: none;
 }
 .product-list img {
-  width: 150px;
-  height: 150px;
+  width: var(--imgBig--);
+  min-width: var(--imgBig--);
+  max-width: var(--imgBig--);
+  height: var(--imgBig--);
+  min-height: var(--imgBig--);
+  max-height: var(--imgBig--);
   object-fit: cover;
   margin-right: 10px;
   border-radius: 10px;
@@ -72,11 +81,24 @@ p
   margin: 0;
 }
 @media (max-width:768px) {
+  .container
+  {
+    padding: 0;
+  }
+  .image-container img
+  {
+    width: 100vw;
+    height: 200px;
+  }
   .product-list img
   {
-    width: 75px;
+    width: var(--imgSmall--);
+    min-width: var(--imgSmall--);
+    max-width: var(--imgSmall--);
     margin-right: 5px;
-    height: 75px;
+    height: var(--imgSmall--);
+    min-height: var(--imgSmall--);
+    max-height: var(--imgSmall--);
   }
   .product-list .product-name {
     font-size: 1.2rem;
@@ -100,15 +122,14 @@ p
 {
   padding: 10px;
 }
-.product-card .product-card-header
-{
-  /* display: flex; */
-  /* justify-content: center; */
-}
 .product-card .product-card-header img
 {
-  width: 400px;
-  height: 400px;
+  width: var(--homeImg--);
+  height: var(--homeImg--);
+  max-width: var(--homeImg--);
+  min-width: var(--homeImg--);
+  max-height: var(--homeImg--);
+  min-height: var(--homeImg--);
   border-radius: 8px;
 }
 .product-card .product-card-body p ,
@@ -125,6 +146,10 @@ p
   .product-card .product-card-header img
   {
     width: 100%;
-    height: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    height: 300px;
+    max-height: 300px;
+    min-height: 300px;
   }
 }
